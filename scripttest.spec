@@ -4,7 +4,7 @@
 #
 Name     : scripttest
 Version  : 1.3
-Release  : 5
+Release  : 6
 URL      : https://pypi.python.org/packages/source/s/scripttest/scripttest-1.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/s/scripttest/scripttest-1.3.tar.gz
 Summary  : Helper to test command-line scripts
@@ -13,8 +13,6 @@ License  : MIT
 Requires: scripttest-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : py-python
-BuildRequires : pytest-python
 BuildRequires : python-dev
 BuildRequires : setuptools
 
@@ -38,14 +36,9 @@ python components for the scripttest package.
 %build
 python2 setup.py build -b py2
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=intel.com,localhost
-python2 setup.py test
 %install
 rm -rf %{buildroot}
-python2 setup.py build -b py2 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files
 %defattr(-,root,root,-)
