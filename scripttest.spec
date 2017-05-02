@@ -4,7 +4,7 @@
 #
 Name     : scripttest
 Version  : 1.3
-Release  : 10
+Release  : 11
 URL      : https://pypi.python.org/packages/source/s/scripttest/scripttest-1.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/s/scripttest/scripttest-1.3.tar.gz
 Summary  : Helper to test command-line scripts
