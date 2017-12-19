@@ -4,7 +4,7 @@
 #
 Name     : scripttest
 Version  : 1.3
-Release  : 15
+Release  : 16
 URL      : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Source0  : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Summary  : Helper to test command-line scripts
