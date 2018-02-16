@@ -4,7 +4,7 @@
 #
 Name     : scripttest
 Version  : 1.3
-Release  : 17
+Release  : 18
 URL      : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Source0  : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Summary  : Helper to test command-line scripts
@@ -34,7 +34,6 @@ legacypython components for the scripttest package.
 %package python
 Summary: python components for the scripttest package.
 Group: Default
-Requires: scripttest-legacypython
 Requires: scripttest-python3
 
 %description python
@@ -58,12 +57,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1507179104
+export SOURCE_DATE_EPOCH=1518746136
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1507179104
+export SOURCE_DATE_EPOCH=1518746136
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
