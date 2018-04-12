@@ -4,13 +4,12 @@
 #
 Name     : scripttest
 Version  : 1.3
-Release  : 18
+Release  : 19
 URL      : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Source0  : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Summary  : Helper to test command-line scripts
 Group    : Development/Tools
 License  : MIT
-Requires: scripttest-legacypython
 Requires: scripttest-python3
 Requires: scripttest-python
 BuildRequires : pbr
@@ -21,15 +20,6 @@ BuildRequires : setuptools
 
 %description
 ==========
-
-%package legacypython
-Summary: legacypython components for the scripttest package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the scripttest package.
-
 
 %package python
 Summary: python components for the scripttest package.
@@ -57,25 +47,18 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1518746136
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1523553432
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1518746136
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
