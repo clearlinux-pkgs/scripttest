@@ -14,7 +14,7 @@ Requires: scripttest-python3
 Requires: scripttest-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
