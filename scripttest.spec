@@ -4,7 +4,7 @@
 #
 Name     : scripttest
 Version  : 1.3
-Release  : 33
+Release  : 34
 URL      : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Source0  : http://pypi.debian.net/scripttest/scripttest-1.3.tar.gz
 Summary  : Helper to test command-line scripts
@@ -61,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582924377
+export SOURCE_DATE_EPOCH=1583227945
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
